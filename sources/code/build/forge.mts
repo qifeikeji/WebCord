@@ -139,12 +139,8 @@ const config:ForgeConfig = {
       categories: desktopCategories,
       flagsFile: true,
       type2runtime: true,
-      extraFiles: [
-        {
-          source: resolve(projectPath, "resources"),
-          destination: "/resources"
-        }
-      ]
+      appImageFormat: "appimage",  // 确保使用正确的 appimage 格式
+      appImageDir: "/resources"    // 确保资源文件放到 /resources
     }}),
     new MakerDeb({ options: {
       icon: `${iconFile}.png`,
