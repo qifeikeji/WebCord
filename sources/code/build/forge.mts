@@ -138,7 +138,13 @@ const config:ForgeConfig = {
       genericName: desktopGeneric,
       categories: desktopCategories,
       flagsFile: true,
-      type2runtime: true
+      type2runtime: true,
+      extraFiles: [
+        {
+          source: resolve(projectPath, "resources"),
+          destination: "/resources"
+        }
+      ]
     }}),
     new MakerDeb({ options: {
       icon: `${iconFile}.png`,
