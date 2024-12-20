@@ -47,4 +47,4 @@ jobs:
           retry_on: error
           max_attempts: 3
           timeout_minutes: 10
-          command: npm run publish -- -a ${{ matrix.arch }}
+          command: npm run publish -- --linux appimage --arch ${{ matrix.arch }}
