@@ -2,6 +2,7 @@ name: Publish release
 on:
   push:
     tags-ignore: ['*beta*']
+  workflow_dispatch: # 添加手动触发支持
 
 env:
   WEBCORD_BUILD: RELEASE
